@@ -6,9 +6,9 @@ Server installation. Simplified. :cloud:
 
 This is the stripped down version of the full (original) Nextcloud VM. With this you "only" get a clean Nextcloud installation with files, that's it. No TLS, no automated apps configuration or anything like that - which you do in the [full version](https://www.hanssonit.se/nextcloud-vm/).
 
-The script automatically fetches the latest Nextcloud version when the below steps are taken.
+## Setup
+The script automatically fetches the latest Nextcloud version when the below steps are taken:
 
-To get this going, it's just a few steps:
 1. Download and setup an Ubuntu Server 20.04 with:
     - 2 disks (one for OS, LVM - and one for DATA, don't do anything with this, just add it)
     - USER: ncadmin
