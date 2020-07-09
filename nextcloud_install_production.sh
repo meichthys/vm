@@ -921,7 +921,7 @@ truncate -s 0 \
     /var/log/apache2/error.log \
     "$VMLOGS/nextcloud.log"
 
-sed -i "s|sudo -i||g" /home/"$UNIXUSER"/.bash_profile
+sed -i "s|sudo -i||g" "/home/$UNIXUSER/.bash_profile"
 
 # Set permissions
 chown -R www-data:www-data "$HTML"
