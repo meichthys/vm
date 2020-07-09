@@ -8,8 +8,8 @@ This is the stripped down version of the full (original) Nextcloud VM. With this
 
 The script automatically fetches the latest Nextcloud version when the below steps are taken.
 
-To get this going, it's basically two steps:
-1. Download and setup an Ubuntu Server with
+To get this going, it's just a few steps:
+1. Download and setup an Ubuntu Server 20.04 with:
     - 2 disks (one for OS, LVM - and one for DATA, don't do anything with this, just add it)
     - USER: ncadmin
     - PASSWORD: whatever ('nextcloud' is default)
@@ -19,13 +19,16 @@ To get this going, it's basically two steps:
 5. Enjoy your Nextcloud installation!
 
 ## Dependencies:
-PHP 7,4
-Apache 2.4
-Redis 5
-APCu
-Igbinary (PHP)
-smbclient
-
+(Ubuntu Server 20.04 LTS 64-bit)
+(Linux Kernel: 5.14)
+- Apache 2.4
+- PostgreSQL 12
+- PHP-FPM 7.4
+- Redis Memcache (latest stable version from PECL)
+- APCu local cache (latest stable version from PECL)
+- PHP-igbinary (latest stable version from PECL
+- PHP-smbclient (latest stable version from PECL)
+- Nextcloud Server Latest
 
 ## The usual tags
 **Downloads from Github (not the main downloads location):**
