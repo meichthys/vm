@@ -40,9 +40,11 @@ apt-get purge lxd -y
 # Put IP adress in /etc/issue (shown before the login)
 if [ -f /etc/issue ]
 then
-    echo "\4" >> /etc/issue
-    echo "USER: ncadmin" >> /etc/issue
-    echo "PASS: nextcloud" >> /etc/issue
+{
+echo "\4"
+echo "DEFAULT USER: ncadmin"
+echo "DEFAULT PASS: nextcloud" 
+} >> /etc/issue
 fi
 
 ####### OFFICIAL (custom scripts) #######
