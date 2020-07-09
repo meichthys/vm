@@ -747,7 +747,7 @@ restart_webserver
 # Cleanup
 apt autoremove -y
 apt autoclean
-find /root "/home/$UNIXUSER" -type f \( -name '*.sh*' -o -name '*.html*' -o -name '*.tar*' -o -name '*.zip*' \) -delete
+find /root /home/"$UNIXUSER" -type f \( -name '*.sh*' -o -name '*.html*' -o -name '*.tar*' -o -name '*.zip*' \) -delete
 
 # Add aliases
 if [ -f /root/.bash_aliases ]
@@ -863,15 +863,15 @@ occ_command maintenance:repair
 rm -rf "$SCRIPTS"
 
 # Get welcome script
-curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static welcome.sh /home/$UNIXUSER
+curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static welcome.sh /home/"$UNIXUSER"
 
 # Get local lib.sh file
-curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official lib.sh /home/$UNIXUSER
+curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official lib.sh /home/"$UNIXUSER"
 
 # Set permissions
-chown $UNIXUSER:$UNIXUSER -R /home/$UNIXUSER
-chmod +x /home/$UNIXUSER/welcome.sh
-chmod +x /home/$UNIXUSER/lib.sh
+chown "$UNIXUSER":"$UNIXUSER" -R /home/"$UNIXUSER"
+chmod +x /home/"$UNIXUSER"/welcome.sh
+chmod +x /home/"$UNIXUSER"/lib.sh
 
 # Prep for first use
 cat << ROOTNEWPROFILE > "$ROOT_PROFILE"
@@ -909,19 +909,19 @@ if [ -d "/root/bin" ]
 then
     PATH="/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 fi
-bash /home/$UNIXUSER/welcome.sh
+bash /home/"$UNIXUSER"/welcome.sh
 UNIXUSERNEWPROFILE
 
 truncate -s 0 \
     /root/.bash_history \
-    "/home/$UNIXUSER/.bash_history" \
+    /home/"$UNIXUSER"/.bash_history" \
     /var/spool/mail/root \
-    "/var/spool/mail/$UNIXUSER" \
+    /var/spool/mail/"$UNIXUSER" \
     /var/log/apache2/access.log \
     /var/log/apache2/error.log \
     "$VMLOGS/nextcloud.log"
 
-sed -i "s|sudo -i||g" "/home/$UNIXUSER/.bash_profile"
+sed -i "s|sudo -i||g" /home/"$UNIXUSER"/.bash_profile
 
 # Set permissions
 chown -R www-data:www-data "$HTML"
