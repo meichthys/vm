@@ -75,7 +75,7 @@
         <br>
         <div class="logo"></div>
         <div class="logotext">
-            <h2><a href="https://github.com/nextcloud/vm" target="_blank">Nextcloud VM</a> - by <a href="https://www.hanssonit.se/nextcloud-vm/" target="_blank">T&M Hansson IT AB</a></h2>
+            <h2><a href="https://github.com/nextcloud/vm" target="_blank">Nextcloud VM</a> - by <a href="https://github.com/nextcloud/vm/" target="_blank">Nextcloud VM devs</a></h2>
         </div>
         <br>
         <div class="information">
