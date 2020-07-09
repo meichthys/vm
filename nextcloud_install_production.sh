@@ -914,14 +914,14 @@ UNIXUSERNEWPROFILE
 
 truncate -s 0 \
     /root/.bash_history \
-    /home/"$UNIXUSER"/.bash_history" \
+    /home/"$UNIXUSER"/.bash_history \
     /var/spool/mail/root \
     /var/spool/mail/"$UNIXUSER" \
     /var/log/apache2/access.log \
     /var/log/apache2/error.log \
     "$VMLOGS/nextcloud.log"
 
-sed -i "s|sudo -i||g" "/home/$UNIXUSER/.bash_profile"
+sed -i "s|sudo -i||g" /home/"$UNIXUSER"/.bash_profile
 
 # Set permissions
 chown -R www-data:www-data "$HTML"
