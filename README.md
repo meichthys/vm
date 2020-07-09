@@ -20,6 +20,7 @@ To get this going, it's just a few steps:
 
 ## Dependencies:
 (Ubuntu Server 20.04 LTS 64-bit)
+<br>
 (Linux Kernel: 5.14)
 - Apache 2.4
 - PostgreSQL 12
@@ -31,14 +32,6 @@ To get this going, it's just a few steps:
 - Nextcloud Server Latest
 
 ## The usual tags
-**Downloads from Github (not the main downloads location):**
-<br>
-![Downloads](https://img.shields.io/github/downloads/nextcloud/vm/total.svg)
-<br>
-**Downloads from main server:**
-<br>
-~100 per day since 2016
-<br>
 **Build Status:**
 <br>
 [![Build Status](https://travis-ci.org/nextcloud/vm.svg?branch=master)](https://travis-ci.org/nextcloud/vm)
@@ -49,17 +42,7 @@ To get this going, it's just a few steps:
 
 ## Current [maintainers](https://github.com/nextcloud/vm/graphs/contributors)
 * [Daniel Hanson](https://github.com/enoch85) @ [T&M Hansson IT AB](https://www.hanssonit.se)
-* [szaimen](https://github.com/szaimen)
 * You? :)
-
-## Special thanks to
-* [Ezra Holm](https://github.com/ezraholm50) @ [Tech and Me](https://www.techandme.se)
-* [Luis Guzman](https://github.com/Ark74) @ [SwITNet](https://switnet.net)
-* [Stefan Heitmüller](https://github.com/morph027) @ [morph027's Blog](https://morph027.gitlab.io/)
-* [Lorenzo Faleschini](https://github.com/penzoiders)
-* [Georg Großmann](https://github.com/ggeorgg)
-* [liao20081228](https://github.com/liao20081228)
-* [aaaskew](https://github.com/aaaskew)
 
 [Nextcloud Server]: https://bit.ly/2CHIUkA
 [app store]: https://bit.ly/2HUy4v9
