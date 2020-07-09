@@ -29,7 +29,6 @@ cat << INST2
 |                                                                       |
 | To choose the defaults during installation, just hit [ENTER].         |
 |                                                                       |
-|                                                                       |
 |     ###################### Nextcloud - $(date +"%Y") #####################     |
 +-----------------------------------------------------------------------+
 INST2
