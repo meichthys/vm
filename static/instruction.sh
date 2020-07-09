@@ -2,7 +2,6 @@
 
 # T&M Hansson IT AB © - 2020, https://www.hanssonit.se/
 
-VMLOGS=/var/log/nextcloud
 BIGreen='\e[1;92m'      # Green
 IGreen='\e[0;92m'       # Green
 Color_Off='\e[0m'       # Text Reset
@@ -27,6 +26,8 @@ cat << INST2
 | If you are running Windows 10 1809 or later, you can simply use SSH   |
 | from the command prompt. Connect like this:                           |
 | ssh ncadmin@local.IP.of.this.server                                   |
+|                                                                       |
+| To choose the defaults during installation, just hit [ENTER].         |
 |                                                                       |
 |                                                                       |
 |     ###################### Nextcloud - $(date +"%Y") #####################     |
