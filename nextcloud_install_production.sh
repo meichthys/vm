@@ -842,8 +842,8 @@ sleep 3
 run_script STATIC trusted
 
 # Get welcome page (web)
-download_script STATIC index
-mv $SCRIPTS/index.php $HTML/index.php && rm -f $HTML/html/index.html
+curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static index.php /tmp
+mv /tmp/index.php $HTML/index.php && rm -f $HTML/html/index.html
 chmod 750 $HTML/index.php && chown www-data:www-data $HTML/index.php
 
 # Change 000-default to $HTML
@@ -866,7 +866,7 @@ rm -rf "$SCRIPTS"
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static welcome.sh /home/$UNIXUSER
 
 # Get local lib.sh file
-curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static lib.sh /home/$UNIXUSER
+curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official lib.sh /home/$UNIXUSER
 
 # Set permissions
 chown $UNIXUSER:$UNIXUSER -R /home/$UNIXUSER
