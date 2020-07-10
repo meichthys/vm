@@ -279,7 +279,7 @@ Please check https://www.whatsmydns.net/#A/${1} if the IP seems correct."
 msg_box "As you noticed your WAN IP and DNS record doesn't match. This can happen when using DDNS for example, or in some edge cases.
 If you feel brave, or are sure that everything is setup correctly, then you can choose to skip this test in the next step.
 
-You can always contact us for further support if you wish: https://shop.hanssonit.se/product/premium-support-per-30-minutes/"
+You can always contact us for further support if you wish: https://help.nextcloud.com/tags/vm/"
         if [[ "no" == $(ask_yes_or_no "Do you feel brave and want to continue?") ]]
             then
             exit
@@ -440,8 +440,7 @@ if ! version 18.04 "$DISTRO" 20.04.6
 then
     print_text_in_color "$IRed" "Your current Ubuntu version is $DISTRO but must be between 18.04 - 20.04.4 to run this script."
     print_text_in_color "$ICyan" "Please contact us to get support for upgrading your server:"
-    print_text_in_color "$ICyan" "https://www.hanssonit.se/#contact"
-    print_text_in_color "$ICyan" "https://shop.hanssonit.se/"
+    print_text_in_color "$ICyan" "https://help.nextcloud.com/tags/vm"
     sleep 300
 fi
 
@@ -635,8 +634,7 @@ fi
 if ! version 18.04 "$DISTRO" 20.04.4; then
 msg_box "Your current Ubuntu version is $DISTRO but must be between 18.04 - 20.04.4 to run this script."
 msg_box "Please contact us to get support for upgrading your server:
-https://www.hanssonit.se/#contact
-https://shop.hanssonit.se/"
+https://help.nextcloud.com/tags/vm
     exit 1
 fi
 }
@@ -751,8 +749,7 @@ if ! version 18.04 "$DISTRO" 20.04.6
 then
     print_text_in_color "$IRed" "Your current Ubuntu version is $DISTRO but must be between 18.04 - 20.04.4 to run this script."
     print_text_in_color "$ICyan" "Please contact us to get support for upgrading your server:"
-    print_text_in_color "$ICyan" "https://www.hanssonit.se/#contact"
-    print_text_in_color "$ICyan" "https://shop.hanssonit.se/"
+    print_text_in_color "$ICyan" "https://help.nextcloud.com/tags/vm"
     sleep 300
 else
     print_text_in_color "$ICyan" "Testing if network is OK..."
@@ -1037,8 +1034,8 @@ then
 else
 msg_box "Your current version are still not compatible with the version required to run this script.
 
-To upgrade between major versions, please check this out:
-https://shop.hanssonit.se/product/upgrade-between-major-owncloud-nextcloud-versions/"
+To upgrade between major versions, please contact us:
+https://help.nextcloud.com/tags/vm"
     occ_command -V
     exit
 fi
