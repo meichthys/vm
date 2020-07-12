@@ -13,7 +13,7 @@ true
 DEBUG=0
 debug_mode
 
-rm "/home/$UNIXUSER/.profile"
+rm -f /home/ncadmin/.profile
 
 cat <<-UNIXUSER-PROFILE > /home/ncadmin/.bash_profile
 # ~/.profile: executed by the command interpreter for login shells.
@@ -45,7 +45,7 @@ sudo -i
 UNIXUSER-PROFILE
 
 chown ncadmin:ncadmin /home/ncadmin/.bash_profile
-chown ncadmin:ncadmin "$SCRIPTS/history.sh"
-chown ncadmin:ncadmin "$SCRIPTS/instruction.sh"
+chown ncadmin:ncadmin /var/scripts/history.sh
+chown ncadmin:ncadmin /var/scripts/instruction.sh
 
 exit 0
