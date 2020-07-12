@@ -16,9 +16,6 @@ echo -e "|"  "${IGreen}To run the startup script type the sudoer password, then 
 echo -e "|"  "${IGreen}The default sudoer password is: ${BIGreen}nextcloud${IGreen}${Color_Off}                             |"
 cat << INST2
 |                                                                       |
-| You can find the complete install instructions here:                  |
-| Nextcloud VM              = https://bit.ly/2S8eGfS                    |
-|                                                                       |
 | To be 100% sure that all the keystrokes work correctly (like @),      |
 | please use an SSH terminal like Putty. You can download it here:      |
 | https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html        |
