@@ -927,6 +927,15 @@ sed -i "s|sudo -i||g" /home/"$UNIXUSER"/.bash_profile
 chown -R www-data:www-data "$HTML"
 chown -R www-data:www-data "$NCDATA"
 
+# Upgrade system
+is_process_running apt
+is_process_running dpkg
+
+apt update -q4 & spinner_loading
+apt dist-upgrade -y
+apt autoremove -y
+apt autoclean
+
 # Reboot
 print_text_in_color "$IGreen" "Installation done, system will now reboot..."
 reboot
