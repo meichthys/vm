@@ -2,7 +2,7 @@
 After=network.service
 
 [Service]
-ExecStart=/root/prep-nextcloud-start.sh
+ExecStart=/etc/rc.local
 
 [Install]
 WantedBy=default.target
