@@ -30,13 +30,6 @@ download_script STATIC static_ip
 is_process_running apt
 is_process_running dpkg
 
-# Upgrade
-apt update -q4 & spinner_loading
-apt dist-upgrade -y
-
-# Remove LXD (always shows up as failed during boot)
-apt-get purge lxd -y
-
 # Put IP adress in /etc/issue (shown before the login)
 if [ -f /etc/issue ]
 then
