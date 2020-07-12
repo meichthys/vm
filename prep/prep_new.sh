@@ -8,10 +8,12 @@ true
 # shellcheck source=lib.sh
 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
 
+# Root check
+check_root
 
 # Get startup script
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/prep prep-nextcloud-start.sh /root
-chmod +x /root/prep prep-nextcloud-start.sh
+chmod +x /root/prep-nextcloud-start.sh
 
 # Get service script
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/prep prep-nextcloud-start.service /etc/systemd/system
