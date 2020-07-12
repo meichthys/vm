@@ -15,7 +15,7 @@ debug_mode
 
 rm "/home/$UNIXUSER/.profile"
 
-cat <<-UNIXUSER-PROFILE > "$UNIXUSER_PROFILE"
+cat <<-UNIXUSER-PROFILE > /home/ncadmin/.bash_profile
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
@@ -44,8 +44,8 @@ sudo -i
 
 UNIXUSER-PROFILE
 
-chown "$UNIXUSER:$UNIXUSER" "$UNIXUSER_PROFILE"
-chown "$UNIXUSER:$UNIXUSER" "$SCRIPTS/history.sh"
-chown "$UNIXUSER:$UNIXUSER" "$SCRIPTS/instruction.sh"
+chown ncadmin:ncadmin /home/ncadmin/.bash_profile
+chown ncadmin:ncadmin "$SCRIPTS/history.sh"
+chown ncadmin:ncadmin "$SCRIPTS/instruction.sh"
 
 exit 0
