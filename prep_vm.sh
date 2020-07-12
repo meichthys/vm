@@ -20,6 +20,7 @@ root_check
 
 # Must be 20.04
 if ! version 20.04 "$DISTRO" 20.04.6
+then
     msg_box "You need to run Ubuntu 20.04 Server to run this script"
     exit 1
 fi
@@ -29,7 +30,7 @@ if ! grep -q "ncadmin" /etc/passwd
 then
     msg_box "This script based on that the default user 'ncadmin' exists on the system.\n\nPlease re-install this server and create 'ncadmin' during the installation process."
     exit 1
- fi
+fi
 
 # Create scripts folder
 mkdir -p "$SCRIPTS"
