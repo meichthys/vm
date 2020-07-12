@@ -19,7 +19,10 @@ debug_mode
 root_check
 
 # Must be 20.04
-check_distro_version
+if ! version 20.04 "$DISTRO" 20.04.6
+    msg_box "You need to run Ubuntu 20.04 Server to run this script"
+    exit 1
+fi
 
 # Check if ncadmin exists
 if ! grep -q "ncadmin" /etc/passwd
