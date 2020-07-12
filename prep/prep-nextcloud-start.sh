@@ -25,7 +25,7 @@ then
     then
         exit 1
     else
-        curl -fL https://raw.githubusercontent.com/nextcloud/vm/official/prep_vm.sh -o /home/ncadmin/prep_vm.sh
+        curl -fL https://raw.githubusercontent.com/nextcloud/vm/official/prep/prep_vm.sh -o /home/ncadmin/prep_vm.sh
         chmod +x /home/ncadmin/prep_vm.sh
         bash /home/ncadmin/prep_vm.sh
     fi
