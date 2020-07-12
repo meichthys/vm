@@ -15,7 +15,7 @@ check_root
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/prep prep-nextcloud-start.sh /root
 chmod +x /root/prep-nextcloud-start.sh
 
-# Get service script
+# Get service script # https://linuxconfig.org/how-to-run-script-on-startup-on-ubuntu-20-04-focal-fossa-server-desktop
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/prep prep-nextcloud-start.service /etc/systemd/system
 chmod 664 /etc/systemd/system/prep-nextcloud-start.service
 
