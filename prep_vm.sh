@@ -73,6 +73,9 @@ check_command run_script STATIC change-root-profile
 chmod +x -R "$SCRIPTS"
 chown ncadmin:ncadmin -R "$SCRIPTS"
 
+# Remove startup service
+rm -f /etc/systemd/system/prep_nextcloud_start.service
+
 # Reboot
 if ! reboot
 then
