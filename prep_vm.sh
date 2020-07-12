@@ -18,6 +18,9 @@ debug_mode
 # Must be root
 root_check
 
+# Must be 20.04
+check_distro_version
+
 # Check if ncadmin exists
 if ! grep -q "ncadmin" /etc/passwd
 then
