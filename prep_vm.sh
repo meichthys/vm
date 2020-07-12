@@ -18,6 +18,13 @@ debug_mode
 # Must be root
 root_check
 
+# Check if ncadmin exists
+if ! grep -q "ncadmin" /etc/passwd
+then
+    msg_box "This script based on that the default user 'ncadmin' exists on the system.\n\nPlease re-install this server and create 'ncadmin' during the installation process."
+    exit 1
+ fi
+
 # Create scripts folder
 mkdir -p "$SCRIPTS"
 
