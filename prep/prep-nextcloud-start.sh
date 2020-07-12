@@ -11,6 +11,8 @@
 #
 # By default this script does nothing.
 
+export UNIXUSER=ncadmin
+
 # Add sleep to avoid racecondition
 sleep 2
 
