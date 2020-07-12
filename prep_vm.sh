@@ -72,3 +72,9 @@ check_command run_script STATIC change-root-profile
 chmod +x -R "$SCRIPTS"
 chown ncadmin:ncadmin -R "$SCRIPTS"
 
+# Reboot
+if ! reboot
+then
+    shutdown -r now
+fi
+
