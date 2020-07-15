@@ -20,4 +20,4 @@ chmod 664 /etc/systemd/system/prep-nextcloud-start.service
 
 reboot
 
-exit 1
+exit 0
