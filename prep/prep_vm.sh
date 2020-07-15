@@ -2,14 +2,14 @@
 
 # T&M Hansson IT AB © - 2020, https://www.hanssonit.se/
 
-export UNIXUSER=ncadmin
-
 ####### MASTER #######
 
 # shellcheck disable=2034,2059
 true
 # shellcheck source=lib.sh
 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+
+export UNIXUSER=ncadmin
 
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
@@ -65,6 +65,8 @@ fi
 true
 # shellcheck source=lib.sh
 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/official/lib.sh)
+
+export UNIXUSER=ncadmin
 
 # Get needed scripts for first bootup
 download_script STATIC instruction
