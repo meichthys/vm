@@ -11,8 +11,6 @@
 #
 # By default this script does nothing.
 
-export UNIXUSER=ncadmin
-
 # Add sleep to avoid racecondition
 sleep 2
 
@@ -32,3 +30,6 @@ then
         bash /home/ncadmin/prep_vm.sh
     fi
 fi
+
+# Make sure we exit clean
+exit
