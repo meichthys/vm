@@ -14,7 +14,7 @@ The script automatically fetches the latest Nextcloud version when the below ste
     - USER: ncadmin
     - PASSWORD: whatever ('nextcloud' is default)
 2. Boot the server and login.
-3. Run `wget https://github.com/nextcloud/vm/blob/official/prep_vm.sh`
+3. Run `wget https://github.com/nextcloud/vm/blob/official/prep/prep_vm.sh`
 4. Reboot and login again
 5. Enjoy your Nextcloud installation!
 
