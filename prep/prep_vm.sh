@@ -20,6 +20,9 @@ debug_mode
 # Must be root
 root_check
 
+# Add some info
+print_text_in_color "$IGreen" "Preparing the server for first use..."
+
 # Must be 20.04
 if ! version 20.04 "$DISTRO" 20.04.6
 then
