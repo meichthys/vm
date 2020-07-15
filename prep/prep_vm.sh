@@ -81,6 +81,7 @@ chown ncadmin:ncadmin -R "$SCRIPTS"
 # Remove startup service
 rm -f etc/systemd/system/prep-nextcloud-start.service
 rm -f /etc/rc.local
+rm -f /home/ncadmin/1_prep_vm.sh
 
 # Reboot
 if ! reboot
