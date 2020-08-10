@@ -192,7 +192,7 @@ else
 fi
 
 # Set locales
-run_script STATIC locales
+run_script ADDONS locales
 
 # Test RAM size (2GB min) + CPUs (min 1)
 ram_check 2 Nextcloud
@@ -255,15 +255,15 @@ choice=$(whiptail --title "Choose disk format" --radiolist "How would you like t
 
 case "$choice" in
     "2 Disks Auto")
-        run_script STATIC format-sdb
+        run_script DISK format-sdb
         # Change to zfs-mount-generator
-        run_script STATIC change-to-zfs-mount-generator
+        run_script DISK change-to-zfs-mount-generator
 
     ;;
     "2 Disks Manual")
-        run_script STATIC format-chosen
+        run_script DISK format-chosen
         # Change to zfs-mount-generator
-        run_script STATIC change-to-zfs-mount-generator
+        run_script DISK change-to-zfs-mount-generator
     ;;
     "1 Disk")
         print_text_in_color "$IRed" "1 Disk setup chosen."
@@ -311,7 +311,7 @@ do
 done
 
 # Check current repo
-run_script STATIC locate_mirror
+run_script ADDONS locate_mirror
 
 # Install PostgreSQL
 # sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
@@ -527,7 +527,7 @@ echo "pgsql.log_notice = 0"
 } >> "$PHP_FPM_DIR"/conf.d/20-pdo_pgsql.ini
 
 # Install Redis (distrubuted cache)
-run_script STATIC redis-server-ubuntu
+run_script ADDONS redis-server-ubuntu
 
  # Install smbclient
  # php"$PHPVER"-smbclient does not yet work in PHP 7.4
@@ -839,7 +839,7 @@ run_script STATIC change_db_pass
 sleep 3
 
 # Update trusted
-run_script STATIC trusted
+run_script NETWORK trusted
 
 # Get welcome page (web)
 curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/official/static index.php /tmp
