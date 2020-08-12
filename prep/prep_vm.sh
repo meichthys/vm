@@ -41,7 +41,7 @@ mkdir -p "$SCRIPTS"
 # Get needed scripts for first bootup
 download_script GITHUB_REPO lib
 download_script STATIC history
-download_script STATIC static_ip
+download_script NETWORK static_ip
 
 # Check if dpkg or apt is running
 is_process_running apt
