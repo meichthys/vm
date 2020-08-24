@@ -194,6 +194,36 @@ fi
 # Set locales
 run_script ADDONS locales
 
+# Fix LVM on BASE image
+if grep -q "LVM" /etc/fstab
+then
+    # Resize LVM (live installer is &%¤%/!
+    # VM
+    print_text_in_color "$ICyan" "Extending LVM, this may take a long time..."
+    lvextend -l 100%FREE --resizefs /dev/ubuntu-vg/ubuntu-lv
+
+    # Run it again manually just to be sure it's done
+    print_text_in_color "$ICyan" "Extending LVM, this may take a long time..."
+    while :
+    do
+        lvdisplay | grep "Size" | awk '{print $3}'
+        if ! lvextend -L +10G /dev/ubuntu-vg/ubuntu-lv >/dev/null 2>&1
+        then
+            if ! lvextend -L +1G /dev/ubuntu-vg/ubuntu-lv >/dev/null 2>&1
+            then
+                if ! lvextend -L +100M /dev/ubuntu-vg/ubuntu-lv >/dev/null 2>&1
+                then
+                    if ! lvextend -L +1M /dev/ubuntu-vg/ubuntu-lv >/dev/null 2>&1
+                    then
+                        resize2fs /dev/ubuntu-vg/ubuntu-lv
+                        break
+                    fi
+                fi
+            fi
+        fi
+    done
+fi
+
 # Test RAM size (2GB min) + CPUs (min 1)
 ram_check 2 Nextcloud
 cpu_check 1 Nextcloud
