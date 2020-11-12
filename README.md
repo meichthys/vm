@@ -67,7 +67,7 @@ Please report any issues you can find. Improvments are welcome!
 ## First look
 #### Nextcloud
 ![alt tag](https://github.com/nextcloud/nextcloud.com/blob/master/assets/img/features/VMwelcome.png)
-#### Adminer (Database Adminsitration) *not default*
+#### Adminer (Database Administration) *not default*
 ![alt tag](https://i.imgur.com/tiF4chg.png)
 #### Webmin (Server Administration GUI) *not default*
 ![alt tag](https://i.imgur.com/hLkmA1D.png)
@@ -83,7 +83,7 @@ Please report any issues you can find. Improvments are welcome!
 <br>
 **Build Status:**
 <br>
-[![Build Status](https://travis-ci.org/nextcloud/vm.svg?branch=master)](https://travis-ci.org/nextcloud/vm)
+[![Check-code-with-shellcheck Actions status](https://github.com/nextcloud/vm/workflows/check-code-with-shellcheck/badge.svg)](https://github.com/nextcloud/vm/actions)
 <br>
 **Stability Status:**
 <br>
